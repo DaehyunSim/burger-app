@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Aux from '../../HOC/Aux';
+import Auxil from '../../HOC/Auxil';
 import Burger from '../../Components/Burger/Burger';
 import BuildControls from '../../Components/Burger/BuildControls/BuildControls';
 
@@ -30,13 +30,13 @@ class BurgerBuilder extends Component{
             disabledInfo[key] = disabledInfo[key] <= 0;
         }
         return(
-            <Aux>
+            <Auxil>
                 <Burger ingredients={this.state.ingredients}/>
                 <BuildControls 
                     IngredientAdded={this.addIngredientHandler}
                     IngredientRemoved={this.removeIngredientHandler}
                     disabled={disabledInfo}/>
-            </Aux>
+            </Auxil>
         );
     }
 
