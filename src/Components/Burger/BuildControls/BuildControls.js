@@ -18,9 +18,10 @@ const buildControls = (props) =>(
                 label={ctrl.label}
                 added={() => props.IngredientAdded(ctrl.type)}
                 removed={() => props.IngredientRemoved(ctrl.type)}
+                calculate={() => props.CalculatePrice(ctrl.type)}
                 disabled={props.disabled[ctrl.type]}/>
         ))}
-        <p>${props.price.toFixed(2)}</p>
+        <p>${props.totalPrice.toFixed(2)}</p>
     </div>
 );
 
