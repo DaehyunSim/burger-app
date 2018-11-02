@@ -20,6 +20,7 @@ const buildControls = (props) =>(
                 removed={() => props.IngredientRemoved(ctrl.type)}
                 disabled={props.disabled[ctrl.type]}/>
         ))}
+        <p>${props.price.toFixed(2)}</p>
     </div>
 );
 
